@@ -21,7 +21,8 @@ The data spans multiple years, allowing both long-term trend analysis and season
 ## 🔍 Methods Used
 
 ### 1. Descriptive Statistics
-!(images/temperature changes.png)
+<img width="786" height="127" alt="temperature changes" src="https://github.com/user-attachments/assets/3af83006-c9a4-4d32-862a-a89279fc2d12" />
+
 
 The mean temperature change is approximately 0.54°C, with a median of 0.47°C and a variance of 0.43, indicating slight variability in temperature anomalies. For CO₂ concentrations, the mean is 180.72 ppm, the median is significantly higher at 313.84 ppm, and the variance is 32,600, which reflects substantial variability in CO₂ levels over the dataset’s timeframe.
 
