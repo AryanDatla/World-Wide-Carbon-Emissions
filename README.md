@@ -18,130 +18,42 @@ The data spans multiple years, allowing both long-term trend analysis and season
 
 ---
 
-## 🔍 Methods Used
+## 🔍 Key Findings
 
 ### 1. Descriptive Statistics
-<img width="786" height="127" alt="temperature changes" src="https://github.com/user-attachments/assets/3af83006-c9a4-4d32-862a-a89279fc2d12" />
-
-
+![STATS](images/temperature_changes.png)
 The mean temperature change is approximately 0.54°C, with a median of 0.47°C and a variance of 0.43, indicating slight variability in temperature anomalies. For CO₂ concentrations, the mean is 180.72 ppm, the median is significantly higher at 313.84 ppm, and the variance is 32,600, which reflects substantial variability in CO₂ levels over the dataset’s timeframe.
 
 ### 2. Time Series Analysis
 ![time-series-analysis](images/newplot.png)
-* Line plots were used to observe how CO₂ levels and temperature anomalies evolve over time.
-* Trend lines highlight long-term increases in both variables.
+The time-series graph shows a consistent increase in CO₂ concentrations (ppm) over the years, indicating the accumulation of greenhouse gases in the atmosphere. A slight upward trend in global temperature change suggests that rising CO₂ levels are associated with global warming. This supports the hypothesis of CO₂’s significant contribution to temperature increase.
 
 ### 3. Correlation Analysis
-
-* A correlation heatmap was used to measure the strength of association between CO₂ concentration and temperature change.
-
+![correlation](images/correlation.png)
+The heatmap reveals a strong positive correlation (0.96) between CO₂ concentrations and temperature changes. This reinforces the observation that higher CO₂ levels are closely linked with increasing global temperatures
 ### 4. Scatter Plot Analysis
+![scatter](images/scatter.png)
+The scatter plot shows a clear linear trend, where higher CO₂ concentrations correspond to greater temperature changes.  This visual evidence supports the direct relationship between CO₂ emissions and global warming.
 
-* Scatter plots visualize the direct relationship between CO₂ levels and temperature anomalies.
+![trends](images/lineartrends.png)
+This graph shows the linear trends in both temperature change and CO₂ concentrations over time, represented by their respective slopes. The CO₂ trend has a much steeper slope (0.32) compared to temperature (0.03), which indicates a faster rate of increase in CO₂ emissions relative to temperature change. This suggests that while CO₂ levels are rising rapidly, the temperature impact, though slower, is accumulating steadily and may have long-term consequences.
 
 ### 5. Regression Analysis (OLS)
-
-* Ordinary Least Squares (OLS) regression was applied to quantify how much temperature change can be explained by CO₂ concentrations.
+![reg-res](images/regression_results.png)
+The OLS regression results indicate a strong relationship between CO₂ concentration and temperature change, with an R-squared value of 0.949, meaning 94.9% of the variance in temperature change is explained by the model. The coefficient for CO₂ concentration (0.3245) is statistically significant (p < 0.05), which suggests a positive association between CO₂ levels and temperature change.
 
 ### 6. Granger Causality Test
-
-* Used to test whether changes in CO₂ concentrations can predict temperature changes within specific time lags.
+![test](images/correlation.png)
+There is a very strong correlation between CO₂ concentrations and temperature changes. However, Granger Causality tests do not provide strong evidence that changes in CO₂ concentrations directly cause changes in temperature within the lags tested.
 
 ### 7. Clustering Analysis
-
-* Clustering techniques were applied to group data points based on CO₂ and temperature patterns.
+![cluster](images/cluster.png)
+The progression from green to orange and then to blue clusters reflects a clear trend of increasing temperature change corresponding to rising CO₂ levels, effectively illustrating the correlation between greenhouse gas concentrations and global temperature variations.
 
 ### 8. Scenario Analysis
-
-* Simulated increases and reductions in CO₂ levels to estimate potential temperature impacts.
-
----
-
-## 📈 Key Findings
-
-### 🔹 Descriptive Statistics
-
-* **Mean temperature change:** ~0.54 °C
-
-* **Median temperature change:** ~0.47 °C
-
-* **Temperature variance:** ~0.43
-
-* **Mean CO₂ concentration:** ~180.72 ppm
-
-* **Median CO₂ concentration:** ~313.84 ppm
-
-* **CO₂ variance:** ~32,600
-
-This shows relatively steady temperature changes but high variability in CO₂ levels over time.
-
----
-
-### 🔹 Time-Series Trends
-
-* CO₂ concentrations show a **consistent upward trend**, reflecting continuous accumulation of greenhouse gases.
-* Global temperature change also shows an **upward trend**, supporting the global warming hypothesis.
-
----
-
-### 🔹 Correlation Results
-
-* **Correlation coefficient ≈ 0.96**, indicating a **very strong positive relationship** between CO₂ levels and temperature change.
-
----
-
-### 🔹 Scatter Plot Insights
-
-* A clear **linear relationship** is visible: higher CO₂ concentrations correspond to higher temperature anomalies.
-
----
-
-### 🔹 Trend Line Comparison
-
-* CO₂ trend slope: **0.32**
-* Temperature trend slope: **0.03**
-
-This indicates that CO₂ levels are increasing much faster than temperature, but temperature effects accumulate steadily over time.
-
----
-
-### 🔹 Seasonal CO₂ Patterns
-
-* CO₂ levels **peak in late spring/early summer (around May)**.
-* CO₂ levels are **lowest in early fall (around September)**.
-
-These fluctuations are linked to **natural carbon sinks**, such as plant photosynthesis and respiration.
-
----
-
-### 🔹 Regression Analysis (OLS)
-
-* **R-squared: 0.949**
-  → 94.9% of the variation in temperature change is explained by CO₂ concentration.
-* **CO₂ coefficient: 0.3245 (p < 0.05)**
-  → Indicates a statistically significant positive relationship.
-
----
-
-### 🔹 Granger Causality Test
-
-* While correlation is very strong, Granger causality tests **do not provide strong evidence** that CO₂ changes directly cause temperature changes within the tested time lags.
-
----
-
-### 🔹 Clustering Results
-
-* Data clusters progress from **lower CO₂ & lower temperature** to **higher CO₂ & higher temperature**.
-* This visually reinforces the relationship between greenhouse gas concentration and warming.
-
----
-
-### 🔹 Scenario Analysis
-
-* **10% increase in CO₂** → noticeable rise in temperature anomalies.
-* **10–20% reduction in CO₂** → potential cooling effects and partial reversal of warming trends.
-
-This highlights the **sensitivity of global temperatures** to CO₂ levels.
+![prediction](images/prediction_result.png)
+10% increase in CO₂ results in a notable rise in temperature anomalies, which demonstrates the sensitivity of global temperatures to CO₂ levels.
+10-20% reduction in CO₂ could lead to significant cooling effects, which will potentially reverse some warming trends.
 
 ---
 
@@ -168,14 +80,3 @@ This highlights the **sensitivity of global temperatures** to CO₂ levels.
 * Incorporate additional climate variables (methane, aerosols, ocean temperature).
 * Use non-linear and lag-aware models.
 * Extend causality analysis with longer lag windows.
-
----
-
-If you want, I can also:
-
-* Rewrite this in a **shorter README**
-* Add a **folder structure section**
-* Add **code snippets & plots references**
-* Make it sound more **academic or more beginner-friendly**
-
-Just tell me 👍
